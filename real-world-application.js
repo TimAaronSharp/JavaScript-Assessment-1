@@ -57,11 +57,19 @@ var crayola1990 = [
 	'Timberwolf',
 	'Antique Brass'
 ];
-
+function urlSlug(list) {
+	var out = []
+	for (var i = 0; i < list.length; i++) {
+		list[i] = list[i].toLowerCase()
+		out.push(list[i].split(' ').join('-'))
+	}
+	return out
+}
+console.log(urlSlug(crayola1990))
 //create a loop that will iterate over each item in the array and then use the String methods to modify the value at the current position in the array
 
 /***** HINTS *******
  * remember strings are immutable but the value of a variable can be adjusted as often as needed.
  * take advantage of the methods available on stings http://www.w3schools.com/js/js_string_methods.asp
  * there are multiple ways to do something like this but you might consider using split and join
- */ 
+ */
